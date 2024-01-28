@@ -9,23 +9,26 @@ import {
 } from "react-native";
 import { styles } from "./style";
 import { useState } from "react";
+import { api } from "../../../http";
 
 export default function Login() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
 
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault()
+        setIsLoading(true)
         try {
-
+            console.log(email, password)
         }
         catch (err) {
 
         }
         finally {
-
+            setIsLoading(false)
         }
 
     }

@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerRoutes() {
     return (
-        <Drawer.Navigator screenOptions={{ title: '' }}>
+        <Drawer.Navigator screenOptions={{ title: '' }} initialRouteName="login">
             <Drawer.Screen
                 name="Home"
                 component={TabRoutes}
