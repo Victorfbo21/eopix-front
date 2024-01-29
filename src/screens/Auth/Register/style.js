@@ -1,3 +1,5 @@
+
+
 import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
@@ -9,14 +11,14 @@ export const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     forgot: {
-        flexDirection: 'row',
-        alignItems: 'center'
+        marginLeft: '60%',
     },
     title: {
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
         color: '#ffa500',
+        marginTop: 4
     },
     image: {
         width: 200,
@@ -57,11 +59,5 @@ export const styles = StyleSheet.create({
         color: '#ffa500',
         fontSize: 12,
         fontWeight: 'bold',
-    },
-    buttonRegister: {
-        color: '#ffa500',
-        fontSize: 12,
-        fontWeight: 'bold',
-        marginRight: 85
     }
 });
