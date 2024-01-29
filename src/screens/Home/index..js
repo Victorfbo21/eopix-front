@@ -4,6 +4,8 @@ import Header from "../../components/Header";
 import Balance from "../../components/Balance";
 import Movements from "../../components/Movements";
 import Actions from "../../components/Actions";
+import { useContext } from "react";
+import { AuthContext } from "../../context/auth";
 
 const list = [
     {
@@ -37,9 +39,12 @@ const list = [
 ]
 
 export default function Home() {
+
+    const auth = useContext(AuthContext)
+
     return (
         <View style={styles.container}>
-            <Header name="Victor Bentes" />
+            <Header name={auth.user.name} />
             <Balance gastos={"-7.0000"} saldo={"15.0000"} />
             <Actions />
             <Text style={styles.title}>Ultimas Movimentações</Text>

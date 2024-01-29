@@ -32,12 +32,12 @@ export default function Login() {
         e.preventDefault()
         setIsLoading(true)
         try {
-            if (email && password) {
-                showToast('Logado com Sucesso!')
-                return navigation.navigate('App')
-            }
+            const loginResponse = await auth.login({ email: email, password: password })
+            console.log(loginResponse)
+            if (loginResponse.error)
+                return showToast('Erro ao Executar Login')
 
-            showToast('Usuário ou Senha Inválidos')
+            navigation.navigate('Home')
         }
         catch (err) {
 
