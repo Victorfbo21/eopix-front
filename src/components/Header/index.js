@@ -13,7 +13,6 @@ export default function Header({ name }) {
         <View style={style.container}>
             <View style={style.content}>
                 <Text style={style.userName}>{name}</Text>
-
                 <TouchableOpacity activeOpacity={0.9} style={style.buttonUser}>
                     <Feather name="user" size={27} color="#FFF" />
                 </TouchableOpacity>

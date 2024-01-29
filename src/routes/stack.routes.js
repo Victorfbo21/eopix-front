@@ -1,17 +1,15 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import Profile from "../screens/Profile";
-
+import TabRoutes from "./tab.routes";
+import Login from "../screens/Auth/Login";
 
 const Stack = createNativeStackNavigator();
 
 
-export default function StackRoutes() {
+export default function AuthStack() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen
-                name="Perfil"
-                component={Profile}
-            />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="App" component={TabRoutes} />
         </Stack.Navigator>
     )
 }
