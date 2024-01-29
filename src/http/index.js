@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getSessionToken } from "./session";
+// import { getSessionToken } from "./session";
 
 
 const conectionParams = {
@@ -9,15 +9,15 @@ const conectionParams = {
 
 export const api = axios.create(conectionParams)
 
-export const apiAuth = async () => {
+// export const apiAuth = async () => {
 
-    const sessionToken = getSessionToken();
+//     const sessionToken = getSessionToken();
 
-    return axios.create({
-        ...conectionParams,
-        headers: {
-            Authorization: `Bearer ${sessionToken}`
-        }
-    })
-}
+//     return axios.create({
+//         ...conectionParams,
+//         headers: {
+//             Authorization: `Bearer ${sessionToken}`
+//         }
+//     })
+// }
 

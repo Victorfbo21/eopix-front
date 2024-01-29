@@ -14,8 +14,13 @@ import { api } from "../../../http";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons"
 import { showToast } from "../../../utils";
+import { useContext } from "react";
+import { AuthContext } from "../../../context/auth";
 
 export default function Login() {
+
+
+    const auth = useContext(AuthContext);
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
